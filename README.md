@@ -3,6 +3,10 @@
 
 A full-stack task management application built with HTML, CSS, JavaScript, jQuery, Node.js, Express.js and MongoDB.
 
+## Demo Video
+
+https://github.com/user-attachments/assets/dd0afd3f-2064-46b5-830b-b1676f429e2d
+
 ## Features
 
 - Create new tasks
