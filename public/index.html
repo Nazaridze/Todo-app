@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>My Task List</h1>
+
+  <div id="message"></div>
+
+  <main>
+    <section class="panel">
+      <h2>Create a task</h2>
+
+      <form id="taskForm">
+        <label for="title">Task title *</label>
+        <input id="title" type="text" minlength="3" maxlength="100" required>
+
+        <label for="description">Description</label>
+        <textarea id="description" maxlength="500"></textarea>
+
+        <label for="priority">Priority *</label>
+        <select id="priority" required>
+          <option value="high">High</option>
+          <option value="medium" selected>Medium</option>
+          <option value="low">Low</option>
+        </select>
+
+        <button type="submit">Add task</button>
+      </form>
+    </section>
+
+    <div class="task-list-controls" id="taskListControls" hidden>
+      <button id="toggleCompletedButton" type="button" aria-expanded="true" aria-controls="completedTaskList">
+        Hide completed
+      </button>
+    </div>
+
+    <section class="panel task-panel" id="activeTasksPanel" hidden>
+      <h2>My tasks</h2>
+      <div id="taskList">Loading...</div>
+    </section>
+
+    <section class="panel task-panel" id="completedTasksPanel" hidden>
+      <h2>Completed tasks</h2>
+      <div id="completedTaskList"></div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
